@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Friends &amp; Clans · Productivity Islands</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="social">
+  <div class="shell">
+    <header class="appbar">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Productivity Islands</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Islands</a>
+        <a href="city.html">Main Island</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="friends-clans.html">Friends</a>
+        <a href="focus.html">Focus</a>
+        <a href="habits.html">Habits</a>
+        <a href="notes.html">Notes</a>
+      </nav>
+      <div class="resources"><span class="resource">Coins <b data-coins></b></span></div>
+      <button class="mobile-menu" aria-label="Open navigation">Menu</button>
+    </header>
+
+    <main class="page island-page social-page">
+      <div class="page-head">
+        <div>
+          <div class="island-breadcrumb"><span>Friends &amp; Clans</span></div>
+          <h1>Study together</h1>
+          <p>Find your people and climb the monthly rankings.</p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="calendar.html">Chronicle Isle</a>
+          <a class="btn" href="index.html">Back to islands</a>
+        </div>
+      </div>
+
+      <section class="social-castle social-castle-page">
+        <div class="castle-crown" aria-hidden="true"></div>
+        <div class="social-tabs">
+          <button class="active" data-social-tab="clans">Clans</button>
+          <button data-social-tab="leaders">Leaderboard</button>
+        </div>
+        <div id="clans-view">
+          <div class="clan-search">
+            <input id="clan-search" type="search" placeholder="Search clans">
+            <button class="btn" id="clan-create">Create</button>
+          </div>
+          <div id="clan-list" class="clan-list"></div>
+          <form class="friend-form" id="friend-form">
+            <input id="friend-name" placeholder="Friend username" required>
+            <button class="btn" type="submit">Add friend</button>
+          </form>
+        </div>
+        <div id="leaders-view" hidden>
+          <div class="reward-row">
+            <span>1st <b>25</b></span>
+            <span>2nd <b>18</b></span>
+            <span>3rd <b>15</b></span>
+          </div>
+          <div id="leaderboard-list" class="leaderboard-list"></div>
+          <small class="muted">Rewards apply monthly to clans with 3+ members.</small>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

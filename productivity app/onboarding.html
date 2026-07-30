@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Welcome · Productivity Islands</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="onboarding" class="welcome-world">
+  <main class="welcome-shell">
+    <section class="welcome-card">
+      <span class="welcome-step">Welcome, islander</span>
+      <h1>What should we call you?</h1>
+      <p>Your answer creates a completely fresh productivity world.</p>
+      <form id="welcome-form">
+        <label for="welcome-name">Your name</label>
+        <input id="welcome-name" maxlength="32" autocomplete="name" placeholder="Enter your name" required>
+        <div class="island-name-preview"><span>Your new world</span><strong id="island-name-preview">Your name's Island</strong></div>
+        <button class="btn primary" type="submit">Create my island</button>
+      </form>
+    </section>
+    <div class="welcome-island" aria-hidden="true"><i class="welcome-land"></i><i class="welcome-tower"></i><i class="welcome-tree tree-a"></i><i class="welcome-tree tree-b"></i><i class="welcome-flag"></i></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

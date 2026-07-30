@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Profile · Productivity Islands</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="profile">
+  <div class="shell">
+    <header class="appbar">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Productivity Islands</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Islands</a><a href="city.html">Main Island</a><a href="tasks.html">Tasks</a>
+        <a href="calendar.html">Calendar</a><a href="focus.html">Focus</a><a href="habits.html">Habits</a><a href="notes.html">Notes</a>
+      </nav>
+      <div class="resources"><span class="resource">Level <b data-level></b></span><span class="resource">Coins <b data-coins></b></span></div>
+      <button class="mobile-menu" aria-label="Open navigation">Menu</button>
+    </header>
+
+    <main class="page profile-page">
+      <div class="page-head">
+        <div><div class="eyebrow">Profile & settings</div><h1>Your island, your way</h1><p>Manage your identity, preferences, progress, and saved data.</p></div>
+        <a class="btn" href="index.html">Back to islands</a>
+      </div>
+
+      <section class="profile-summary card">
+        <div class="profile-monogram" data-profile-initial>S</div>
+        <div><h2 data-name>Shorya</h2><p class="muted" data-island-name>Shorya's Island</p></div>
+        <div class="profile-level"><span>Level</span><b data-level>1</b></div>
+      </section>
+
+      <div class="stats profile-stats">
+        <article class="stat"><span>Completed tasks</span><b data-stat-tasks>0</b></article>
+        <article class="stat"><span>Focus minutes</span><b data-stat-focus>0</b></article>
+        <article class="stat"><span>Habit check-ins</span><b data-stat-habits>0</b></article>
+        <article class="stat"><span>Population</span><b data-stat-population>0</b></article>
+      </div>
+
+      <div class="grid profile-grid">
+        <section class="card span-7">
+          <div class="card-head"><div><h2>Identity</h2><span class="muted small">Shown throughout your islands</span></div></div>
+          <form class="form" id="profile-form">
+            <div class="field wide"><label for="profile-name">Username</label><input id="profile-name" maxlength="32" required></div>
+            <div class="field wide"><label for="profile-world">Island name</label><input id="profile-world" maxlength="48" required></div>
+            <div class="field wide"><label for="profile-goal">Main productivity goal</label><input id="profile-goal" maxlength="90"></div>
+            <div class="form-actions"><button class="btn primary">Save profile</button></div>
+          </form>
+        </section>
+
+        <section class="card span-5">
+          <div class="card-head"><div><h2>Settings</h2><span class="muted small">Appearance stays off the navigation bar</span></div></div>
+          <form class="form" id="settings-form">
+            <div class="field wide">
+              <label for="appearance-setting">Appearance</label>
+              <select id="appearance-setting"><option value="system">Use device setting</option><option value="light">Light</option><option value="dark">Dark</option></select>
+            </div>
+            <div class="field wide"><label for="palette-setting">Colourway</label><select id="palette-setting"><option value="ocean">Coastal blue</option><option value="forest">Forest green</option><option value="sunset">Warm sunset</option><option value="berry">Berry dusk</option></select></div>
+            <div class="field wide"><label for="scene-setting">Environment detail</label><select id="scene-setting"><option value="rich">Rich</option><option value="calm">Calm</option></select></div>
+            <div class="field wide"><label for="volume-setting">Default sound volume</label><input id="volume-setting" type="range" min="0" max="100" value="35"></div>
+            <label class="setting-row"><span><b>Reduce motion</b><small>Pause decorative animation</small></span><input id="motion-setting" type="checkbox"></label>
+            <div class="form-actions"><button class="btn" type="submit">Save settings</button></div>
+          </form>
+        </section>
+
+        <section class="card span-12 account-card">
+          <div class="card-head"><div><h2>Account &amp; security</h2><span class="muted small">Your active Productivity Islands identity</span></div><span class="account-status" id="account-status">Signed in</span></div>
+          <div class="account-session">
+            <div class="account-orb" data-profile-initial>S</div>
+            <div><span class="account-label">Signed in as</span><strong id="account-email-display"></strong><small>Each account receives its own separate island save on this device.</small></div>
+            <button class="btn danger" id="account-logout" type="button">Sign out</button>
+          </div>
+          <div class="account-notice"><span aria-hidden="true">i</span><p><b>Device storage is active.</b> Your account and island persist in this browser. Cloud sync between devices requires a connected database service.</p></div>
+          <div class="account-layout legacy-account-layout" hidden>
+            <form class="form account-form" id="account-form">
+              <div class="field"><label for="account-email">Email</label><input id="account-email" type="email" autocomplete="email" required></div>
+              <div class="field"><label for="account-password">Password</label><input id="account-password" type="password" autocomplete="current-password" minlength="8" required></div>
+              <div class="form-actions"><button class="btn primary" id="account-login" type="submit">Log in</button><button class="btn" id="account-signup" type="button">Create account</button><button class="btn danger" id="legacy-account-logout" type="button">Log out</button></div>
+            </form>
+            <div class="provider-stack"><button class="btn provider" id="google-login" type="button"><b>G</b> Continue with Google</button><button class="btn provider" id="apple-login" type="button"><b>●</b> Continue with Apple</button><small class="muted">Google and Apple require OAuth credentials when deployed.</small></div>
+          </div>
+        </section>
+
+        <aside class="card span-12">
+          <div class="card-head"><div><h2>Save data</h2><span class="muted small">Stored locally with no automatic expiry</span></div></div>
+          <div class="save-row">
+            <p class="muted">Export a backup before changing browsers or devices.</p>
+            <div class="actions"><button class="btn" id="export-data">Export save</button><label class="btn">Import save<input id="import-data" type="file" accept="application/json" hidden></label></div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

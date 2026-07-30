@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Productivity Islands</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="islands">
+  <div class="shell">
+    <header class="appbar">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Productivity Islands</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="city.html">Main Island</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="focus.html">Focus</a>
+        <a href="habits.html">Habits</a>
+        <a href="notes.html">Notes</a>
+      </nav>
+      <div class="resources">
+        <span class="resource">Coins <b data-coins></b></span>
+        <a class="resource profile-resource" href="profile.html"><span>Profile</span><b data-profile-initial>S</b></a>
+      </div>
+      <button class="mobile-menu" aria-label="Open navigation">Menu</button>
+    </header>
+
+    <main class="archipelago">
+      <div class="waves" aria-hidden="true">
+        <i class="wavelet w1"></i><i class="wavelet w2"></i><i class="wavelet w3"></i>
+        <i class="wavelet w4"></i><i class="wavelet w5"></i><i class="wavelet w6"></i>
+      </div>
+
+      <div class="world-title">
+        <h1 data-island-name></h1>
+        <figure class="island-quote">
+          <blockquote data-quote></blockquote>
+          <figcaption data-quote-author></figcaption>
+        </figure>
+      </div>
+
+      <a class="island central" href="city.html" aria-label="Open Main Island">
+        <span class="island-shape"></span><span class="landmark tower"></span>
+        <span class="island-label"><b>Main Island</b></span>
+      </a>
+      <a class="island i-tasks" href="tasks.html" aria-label="Open Quest Board Isle">
+        <span class="island-shape"></span><span class="landmark questboard"><i class="paper"></i></span>
+        <span class="island-label"><b>Quest Board Isle</b></span>
+      </a>
+      <div class="island-pair i-calendar-pair" aria-label="Chronicle and community islands">
+        <a class="island paired-island chronicle-half" href="calendar.html" aria-label="Open Chronicle Isle">
+          <span class="island-shape"></span><span class="landmark chronicle"></span>
+          <span class="island-label"><b>Chronicle Isle</b></span>
+        </a>
+        <span class="map-island-bridge" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <a class="island paired-island social-half" href="friends-clans.html" aria-label="Open Friends and Clans">
+          <span class="island-shape"></span><span class="landmark castlemark"></span>
+          <span class="island-label"><b>Friends & Clans</b></span>
+        </a>
+      </div>
+      <a class="island i-focus" href="focus.html" aria-label="Open Focus Foundry">
+        <span class="island-shape"></span><span class="landmark lighthouse"></span>
+        <span class="island-label"><b>Focus Foundry</b></span>
+      </a>
+      <a class="island i-habits" href="habits.html" aria-label="Open Grove of Rituals">
+        <span class="island-shape"></span><span class="landmark forestmark"></span>
+        <span class="island-label"><b>Grove of Rituals</b></span>
+      </a>
+      <a class="island i-notes" href="notes.html" aria-label="Open Archivist's Isle">
+        <span class="island-shape"></span><span class="landmark library"></span>
+        <span class="island-label"><b>Archivist's Isle</b></span>
+      </a>
+
+      <span class="ship ship-a" aria-hidden="true"></span>
+      <span class="ship ship-b" aria-hidden="true"></span>
+      <span class="ship ship-c" aria-hidden="true"></span>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

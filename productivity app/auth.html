@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sign in · Productivity Islands</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="auth" class="auth-world">
+  <main class="auth-shell">
+    <section class="auth-story" aria-label="Productivity Islands introduction">
+      <a class="auth-brand" href="auth.html"><span class="brand-mark" aria-hidden="true"></span><span>Productivity Islands</span></a>
+      <div class="auth-copy">
+        <span class="auth-kicker">Your work becomes a world</span>
+        <h1>Build focus.<br>Grow an island.</h1>
+        <p>Complete meaningful work, shape your settlement, and return to a world that remembers your progress.</p>
+      </div>
+      <div class="auth-island-art" aria-hidden="true"><i class="auth-land"></i><i class="auth-tree tree-one"></i><i class="auth-tree tree-two"></i><i class="auth-house"></i><i class="auth-boat"></i></div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="auth-mobile-brand"><span class="brand-mark" aria-hidden="true"></span>Productivity Islands</div>
+        <div class="auth-tabs" role="tablist">
+          <button type="button" class="active" data-auth-mode="login">Sign in</button>
+          <button type="button" data-auth-mode="signup">Create account</button>
+        </div>
+        <header><h2 id="auth-title">Welcome back</h2><p id="auth-copy">Sign in to continue building your world.</p></header>
+        <form id="auth-form" class="auth-form">
+          <div class="field"><label for="auth-email">Email address</label><input id="auth-email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+          <div class="field"><label for="auth-password">Password</label><input id="auth-password" type="password" autocomplete="current-password" minlength="8" placeholder="At least 8 characters" required></div>
+          <div class="field" hidden><label for="auth-confirm">Confirm password</label><input id="auth-confirm" type="password" autocomplete="new-password" minlength="8" placeholder="Repeat your password"></div>
+          <button class="btn primary auth-submit" id="auth-submit" type="submit">Sign in</button>
+        </form>
+        <p class="auth-privacy">Passwords are strengthened with PBKDF2 before being stored. This release keeps account data on this device.</p>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

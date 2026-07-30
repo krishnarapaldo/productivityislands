@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Focus Foundry · Productivity Islands</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="focus">
+  <div class="shell">
+    <header class="appbar">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Productivity Islands</a>
+      <nav class="nav" aria-label="Primary navigation"><a href="index.html">Islands</a><a href="city.html">Main Island</a><a href="tasks.html">Tasks</a><a href="calendar.html">Calendar</a><a href="focus.html">Focus</a><a href="habits.html">Habits</a><a href="notes.html">Notes</a></nav>
+      <div class="resources"><a class="resource profile-resource" href="profile.html"><span>Profile</span><b data-profile-initial>S</b></a></div>
+      <button class="mobile-menu" aria-label="Open navigation">Menu</button>
+    </header>
+    <main class="page island-page">
+      <div class="page-head">
+        <div><div class="island-breadcrumb"><span>Focus Foundry</span></div><h1>Focus session</h1><p>Keep the lighthouse burning.</p></div>
+        <a class="btn" href="index.html">Back to islands</a>
+      </div>
+      <div class="focus-layout">
+        <section class="focus-panel">
+          <div class="timer-face" id="timer-dial" role="slider" tabindex="0" aria-label="Focus duration" aria-valuemin="0" aria-valuemax="60" aria-valuenow="25">
+            <svg class="horseshoe-svg" viewBox="0 0 320 245" aria-hidden="true"><path class="horseshoe-track" pathLength="100" d="M56 207 A120 120 0 1 1 264 207"></path><path class="timer-progress" pathLength="100" d="M56 207 A120 120 0 1 1 264 207"></path></svg>
+            <button class="timer-knob" id="timer-knob" type="button" tabindex="-1" aria-hidden="true"></button>
+            <div class="timer-readout" id="timer-display">25:00</div>
+          </div>
+          <div class="timer-stepper"><button class="btn" id="focus-minus" type="button" aria-label="Reduce by five minutes">−5</button><span id="focus-minutes">25 minutes</span><button class="btn" id="focus-plus" type="button" aria-label="Add five minutes">+5</button></div>
+          <div class="actions focus-actions">
+            <button class="btn primary" id="focus-start">Start</button><button class="btn" id="focus-reset">Reset</button>
+          </div>
+          <p class="focus-reward-note">Finish the session to earn your reward.</p>
+          <div class="sound-bar" aria-label="Ambient sounds"><span>Soundscape</span><button type="button" data-sound="forest">Forest</button><button type="button" data-sound="rain">Rain</button><button type="button" data-sound="ocean">Ocean</button><button type="button" data-sound="off">Off</button><input id="sound-volume" type="range" min="0" max="100" value="35" aria-label="Sound volume"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
